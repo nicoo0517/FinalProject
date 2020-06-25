@@ -5,7 +5,7 @@ from flask import render_template
 from flask import request
 import model
 from flask import session
-
+import time
 
 # -- Initialization section --
 app = Flask(__name__)
@@ -57,14 +57,12 @@ def submitword():
             print(word)
             if word in validWords:
                 counter += 1  
-    # for word in inputwordlist:
-    #     for letter in word:
-    #         if letter in session["consonants"] or letter in session["vowels"]:
-    #             if word in validWords:
-    #                 counter += 1
+
     print(session["consonants"])
     print(session["vowels"])
-
-
     print(counter)
-    return render_template('results.html', inputword = inputword, consonants= session["consonants"], vowels=session["vowels"], counter = str(counter) + " points earned! ")
+
+    if counter < 1:
+        return render_template('loser.html', inputword = inputword, consonants= session["consonants"], vowels=session["vowels"], counter = str(counter) + " points earned! ")
+    elif counter > 0:
+        return render_template('results.html', inputword = inputword, consonants= session["consonants"], vowels=session["vowels"], counter = str(counter) + " points earned! ")
