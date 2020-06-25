@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Anagame</title>
+        <style>
+.center {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  border: 3px solid #ffffff;
+  padding: 10px;
+}
+</style>
+    </head>
+    <body>
+      <body style="background-color:#D6DBDF   ;" class="center">
+     <h1 class="Heading" style="color:#34495E ;">Make as much anagrams with these letters as you can!</h1>
+        <p style="color:#34495E ;"> hurry though! you only have one minute!</p>
+        <p>{{consonants}}, {{vowels}}</p>
+    <form method = "post" action = "/submitword">
+        <textarea id="submitword" name="submitword" rows="10" cols="50" ></textarea>
+            <input type="submit" value="Submit" style="color:#34495E ;"/>
+    </body>
+</html>
