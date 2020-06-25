@@ -38,7 +38,7 @@ def submitword():
     print(inputword)
     inputwordlist = inputword.split(", ")
     print(inputwordlist)
-    session["counter"] = 0
+    counter = 0
     letters = []
     for letter in session["consonants"]:
         letters.append(letter)
@@ -56,7 +56,7 @@ def submitword():
         if isvalid == True:
             print(word)
             if word in validWords:
-                session["counter"] += 1  
+                counter += 1  
     # for word in inputwordlist:
     #     for letter in word:
     #         if letter in session["consonants"] or letter in session["vowels"]:
@@ -66,9 +66,5 @@ def submitword():
     print(session["vowels"])
 
 
-    print(session["counter"])
-    return render_template('results.html', inputword = inputword, consonants= session["consonants"], vowels=session["vowels"])
-
-@app.route('/results', methods = ['GET', 'POST'])
-def results():
-    return render_template('results.html', points = " points earned! ")
+    print(counter)
+    return render_template('results.html', inputword = inputword, consonants= session["consonants"], vowels=session["vowels"], counter = str(counter) + " points earned! ")
