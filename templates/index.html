@@ -1,23 +1,32 @@
 <html>
     <head>
         <title>Anagame</title>
-        <style>
+    <style>
 .center {
+  padding: 10px 0;
   margin: auto;
   width: 60%;
-  padding: 10px 0;
-  border: 3px solid #ffffff;
   text-align: center;
+  
+}
+div {
+     border: 3px solid #ffffff;
+     margin-top: 30%;
+     margin-bottom: 30%;
+     margin-right: 125px;
+     margin-left: 125px;
 }
 </style>
     </head>
     <body>
       <body style="background-color:#D6DBDF   ;" class="center">
-     <h1 class="Heading" style="color:#32a197 ;">Welcome to Anagame!</h1>
+          <div>
+     <h1 class="Heading" style="color:#32a197 ;" >Welcome to Anagame!</h1>
         <p style="color:#32a197 ;"> Hit Start to begin.</p>
         <form method = "post" action = "/startgame">
             <form action="yourpage.com/sitepage" > 
             <input type="submit" value="Start" style="color:#32a197 ;"/>
         </form>
+        </div>
     </body>
 </html>

@@ -1,23 +1,33 @@
 <html>
     <head>
         <title>Anagame</title>
-        <style>
+    <style>
 .center {
-  text-align: center;
+  padding: 10px 0;
   margin: auto;
   width: 60%;
-  border: 3px solid #ffffff;
-  padding: 10px;
+  text-align: center;
+  
+}
+div {
+     border: 3px solid #ffffff;
+     margin-top: 20%;
+     margin-bottom: 30%;
+     margin-right: 125px;
+     margin-left: 125px;
 }
 </style>
     </head>
     <body>
       <body style="background-color:#D6DBDF   ;" class="center">
-     <h1 class="Heading" style="color:#32a197 ;">Make as many anagrams with these letters as you can!</h1>
-        <p style="color:#32a197 ;"> hurry though! you only have one minute!</p>
+        <div>
+     <h1 class="Heading" style="color:#32a197 ;">Make as many words with these letters as you can!</h1>
+        <p style="color:#32a197 ;"> Separate your words with commas. Write only in lowercase letters. Ex: "anagame, is, the, best, game" </p>
+        <p style="color:#32a197 ;"> Hurry though! You only have one minute!</p>
         <p>{{consonants}}, {{vowels}}</p>
     <form method = "post" action = "/submitword">
         <textarea id="submitword" name="submitword" rows="10" cols="50" ></textarea>
-            <input type="submit" value="Submit" style="color:#32a197 ;"/>
+    <input type="submit" value="Submit" style="color:#32a197 ;"/>
+        </div>
     </body>
 </html>

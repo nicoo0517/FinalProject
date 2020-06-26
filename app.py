@@ -18,7 +18,7 @@ def index():
     # print(result)s
     return render_template("index.html")
 
-
+ 
 @app.route('/startgame', methods = ['GET', 'POST'])
 def startgame():
     session["consonants"]= (model.letters())
