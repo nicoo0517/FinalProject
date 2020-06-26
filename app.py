@@ -45,19 +45,22 @@ def submitword():
     for letter in session["vowels"]:
         letters.append(letter)
     print(letters)
+    userwords = []
     for word in inputwordlist:
+        word = word.lower()
         print(word)
         isvalid = True
         for letter in word:
             print(letter)
-            if letter not in letters:
+            if letter not in letters or word.count(letter) > 1:
                 isvalid = False
         print(isvalid)
         if isvalid == True:
             print(word)
-            if word in validWords:
+            if word in validWords and word not in userwords:
                 counter += 1  
-
+                userwords.append(word)
+        
     print(session["consonants"])
     print(session["vowels"])
     print(counter)

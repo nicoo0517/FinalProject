@@ -13,8 +13,8 @@ div {
      border: 3px solid #ffffff;
      margin-top: 20%;
      margin-bottom: 30%;
-     margin-right: 125px;
-     margin-left: 125px;
+     margin-right: 1%;
+     margin-left: 1%;
 }
 </style>
     </head>
@@ -22,12 +22,11 @@ div {
       <body style="background-color:#D6DBDF   ;" class="center">
         <div>
      <h1 class="Heading" style="color:#32a197 ;">Make as many words with these letters as you can!</h1>
-        <p style="color:#32a197 ;"> Separate your words with commas. Write only in lowercase letters. Ex: "anagame, is, the, best, game" </p>
-        <p style="color:#32a197 ;"> Hurry though! You only have one minute!</p>
+        <p style="color:#32a197 ;"> Separate your words with commas. Ex: "anagame, is, the, best, game" </p>
         <p>{{consonants}}, {{vowels}}</p>
     <form method = "post" action = "/submitword">
         <textarea id="submitword" name="submitword" rows="10" cols="50" ></textarea>
-    <input type="submit" value="Submit" style="color:#32a197 ;"/>
+    <input type="submit" value="Submit" style="color:#32a197 ; width:10%; font-size:500%; "/>
         </div>
     </body>
 </html>
